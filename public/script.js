@@ -26,8 +26,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.getElementById("join-btn").addEventListener("click", () => {
-        document.getElementById("lobby-screen").style.display = "block";
-        document.getElementById("join-screen").style.display = "none";
+        document.getElementById("lobby-screen").classList.add("active")
+        document.getElementById("join-screen").classList.remove("active");
     });
+    document.getElementById("start-quiz-btn").addEventListener("click", () => {
+        document.getElementById("quiz-screen").classList.add("active")
+        document.getElementById("lobby-screen").classList.remove("active");
+    });
+    
+   
+   
+
 
 });

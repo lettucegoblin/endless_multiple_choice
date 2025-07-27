@@ -1,22 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>welcome to your very own index</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="script.js" defer></script>
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>welcome to your very own index</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js" defer></script>
+
 </head>
+
 <body>
-    <div id="testoutput"></div>
-    <h3>Welcome to your very own index</h3>
-    <p>This is the index page of your application.</p>      
-    <span>Feel free to customize it as you like.</span>
-    <p>To get started, you can edit the <code>public/index.html</code> file.
-    </p>
-    <p>For more information, visit the <a href="https://expressjs.com/en/starter/installing.html">Express.js documentation</a>.
-    </p>
+  <div id="testoutput"></div>
+  <h3>Welc to your very own index</h3>
+  <p>This is the index page of your application.</p>
+  <span>Feel free to customize it as you like.</span>
+  <p>To get started, you can edit the <code>public/index.html</code> file.
+  </p>
+  <p>For more information, visit the <a href="https://expressjs.com/en/starter/installing.html">Express.js documentation</a>.
+  </p>
+
+  <!-- Join Screen -->
+  <div id="join-screen" class="screen">
+    <h2>Join the Game</h2>
+    <input type="text" id="nickname" placeholder="Enter your nickname" />
+    <button id="join-btn">Join</button>
+  </div>
+
+  <!-- Lobby Screen -->
+  <div id="lobby-screen" class="screen" style="display: none;">
+    <h2>Lobby</h2>
+    <p>Waiting for other players...</p>
+    <ul id="player-list"></ul>
+    <button id="start-quiz-btn">Start Quiz</button>
+  </div>
+
+  <!-- Quiz Screen -->
+  <div id="quiz-screen" class="screen" style="display: none;">
+    <h2>Quiz</h2>
+    <div id="question"></div>
+    <ul id="answers"></ul>
+    <button id="next-btn">Next</button>
+  </div>
+
+  <!-- Scoreboard Screen -->
+  <div id="scoreboard-screen" class="screen" style="display: none;">
+    <h2>Scoreboard</h2>
+    <ul id="scoreboard-list"></ul>
+    <button id="play-again-btn">Play Again</button>
+  </div>
 </body>
+
 </html>

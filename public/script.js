@@ -24,4 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
             Score: ${Object.values(quizState.players).map(player => `${player.name}: ${player.score}`).join(', ')}
         `;
     });
-}); 
+
+    document.getElementById("join-btn").addEventListener("click", () => {
+        document.getElementById("lobby-screen").style.display = "block";
+        document.getElementById("join-screen").style.display = "none";
+    });
+
+});
